@@ -371,7 +371,7 @@ public class RelSubset extends AbstractRelNode {
 
       // Update subset best cost when we find a cheaper rel or the current
       // best's cost is changed
-      if (updateBest) {
+      if (updateBest && !rel.getInputs().contains(this)) {
         LOGGER.trace("Subset cost changed: subset [{}] cost was {} now {}",
             this, bestCost, cost);
 
