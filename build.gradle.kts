@@ -94,8 +94,7 @@ tasks.validateBeforeBuildingReleaseArtifacts {
 }
 
 val String.v: String get() = rootProject.extra["$this.version"] as String
-
-val buildVersion = "calcite".v + releaseParams.snapshotSuffix
+val buildVersion = "calcite".v + "-drill-r0-test"
 
 println("Building Apache Calcite $buildVersion")
 
